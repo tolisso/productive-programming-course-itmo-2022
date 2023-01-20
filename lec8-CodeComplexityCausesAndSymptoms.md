@@ -23,3 +23,16 @@ if (studentIdOpt.isPresent()) {
     ...
 }
 ```
+
+```java
+// если пользуетесь массовой апи для нахождения одного конкретного элемента
+// то сразу вытаскивайте его из списка
+List<String> teamNameInList = getTeamNamesByIds(singletonList(1L));
+
+if (teamNameInList.size() == 1) {
+    String teamName = teamNameInList.get(0);
+    ...
+} else {
+    throw new RuntimeException();
+}
+```
